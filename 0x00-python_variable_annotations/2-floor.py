@@ -1,14 +1,9 @@
-
 #!/usr/bin/env python3
-"""module for type annotated function 'floor'"""
-from math import floor as roundup
+"""Write a type-annotated function floor which takes a float
+n as argument and returns the floor of the float.
+"""
 
 
 def floor(n: float) -> int:
-    """rounds up a float
-
-    Keyword arguments:
-    n -- float variable
-    Return: floor of the float, n
-    """
-    return roundup(n)
+    """Returns the floor of the float"""
+    return int(n)
