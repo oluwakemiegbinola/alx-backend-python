@@ -1,15 +1,14 @@
-
 #!/usr/bin/env python3
-"""complex types - string and int/float to tuple"""
-from typing import Tuple, Union
+"""Write a type-annotated function to_kv that takes a string k
+and an int OR float v as arguments and returns a tuple.The first
+element of the tuple is the string k. The second element is the
+square of the int/float v and should be annotated as a float.
+"""
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    """converts string and int/float to tuple
+import typing
 
-    Keyword arguments:
-    k -- str variable
-    v -- int or float variable
-    Return: a tuple of the format -> (k, v**2)
-    """
-    return (k, v**2)
+
+def to_kv(k: str, v: typing.Union[int, float]) -> typing.Tuple[str, float]:
+    """returns a tuple of the string & square of v as float"""
+    return (k, float(v * v))
